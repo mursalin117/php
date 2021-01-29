@@ -129,6 +129,110 @@
     echo "Now x is: " . $x . "<br>";
     echo "<hr>";
 
+    // logical operators
+    // logical and operator
+    $x = 100;
+    $y = 50;
+    if ($x == 100 and $y == 50) {
+      echo "Hello world!<br>";
+    }
+    // logical or operator
+    if ($x == 100 or $y == 80) {
+      echo "Hello world!!<br>";
+    }
+    // logical xor operator
+    if ($x = 100 xor $y == 80) {
+      echo "Hello world!!!<br>";
+    }
+    // logical and operator
+    if ($x == 100 && $y == 50) {
+      echo "Hello world!!!!<br>";
+    }
+    // logical or operator
+    if ($x == 100 || $y == 80) {
+      echo "Hello world!!!!!<br>";
+    }
+    // logical not operator
+    if ($x != 90) {
+      echo "Hello world!!!!!!<br>";
+    }
+    if ($x !== 90) {
+      echo "Hello world!!!!!!!<br>";
+    }
+    echo "<hr>";
+
+    // string operators
+    // concatenation
+    $txt1 = "Hello";
+    $txt2 = " world!";
+    echo $txt1 . $txt2 . "<br>";
+    // concatenation assignment
+    $txt1 .= $txt2;
+    echo $txt1 . "<br>";
+    echo "<hr>";
+
+    // array operators
+    // union
+    $x = array("a" => "red", "b" => "green");
+    $y = array("c" => "blue", "d" => "yellow");
+    echo "The concatenation array is: ";
+    print_r($x + $y); // union of $x and $y; only way it is
+    echo "<br>";
+    // equality
+    echo "The array x and y are equal: ";
+    var_dump($x == $y);
+    echo "<br>";
+    $x = array("a" => "red", "b" => "green");
+    $y = array("c" => "red", "d" => "green");
+    echo "Now the array x and y are equal: ";
+    var_dump($x == $y); // shows false
+    echo "<br>";
+    // identity
+    $x = array("a" => "red", "b" => "green");
+    $y = array("c" => "blue", "d" => "yellow");
+    echo "The array x and y are identical: ";
+    var_dump($x === $y);
+    echo "<br>";
+    $x = array("a" => "red", "b" => "green");
+    $y = array("c" => "red", "d" => "green");
+    echo "Now the array x and y are identical: ";
+    var_dump($x === $y);
+    echo "<br>";
+    // inequality
+    echo "The array x and y are inequal: ";
+    var_dump($x != $y);
+    echo "<br>";
+    $x = array("a" => "red", "b" => "green");
+    $y = array("c" => "red", "d" => "green");
+    echo "The array x and y are inequal: ";
+    var_dump($x != $y);
+    echo "<br>";
+    // inequality
+    $x = array("a" => "red", "b" => "green");
+    $y = array("c" => "blue", "d" => "yellow");
+    echo "The array x and y are inequal: ";
+    var_dump($x <> $y);
+    echo "<br>";
+    // non-identity
+    echo "The array x and y are non-identical: ";
+    var_dump($x !== $y);
+    echo "<br>";
+    $x = array("a" => "red", "b" => "green");
+    $y = array("c" => "red", "d" => "green");
+    echo "The array x and y are non-identical: ";
+    var_dump($x !== $y);
+    echo "<br>";
+    echo "<hr>";
+
+    // conditional assignment operators
+    // ternary operator
+    // if empty($user) = true, set $status = "anonymous"
+    echo $status = (empty($user)) ? "anonymous" : "logged in";
+    echo "<br>";
+    $user = "John Doe";
+    // if empty($user) = false, set $status = "logged in"
+    echo $status = (empty($user)) ? "anonymous" : "logged in";
+    echo "<br>";
     ?>
 
   </body>
